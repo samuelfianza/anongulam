@@ -1,0 +1,82 @@
+<!doctype html>
+	<html>
+	<head>
+		<title>Anong Ulam?</title>
+		<style>
+			body { text-align: center; }
+			h1 a {
+				color: #111;;
+				font-family: sans-serif;
+				text-decoration: none;
+				font-size: 10rem;
+				margin-top: 30vh;
+			}
+			h1 a:hover {
+				text-decoration: underline;
+			}
+			button {
+				font-family: sans-serif;
+				background: #333;
+				border: 0;
+				border-radius: 10px;
+				color: #fff;
+				font-size: 5rem;
+				padding: 2rem;
+				cursor: pointer;
+				margin-top: 10%;
+			}
+			button:hover {
+				background: #111;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<button onclick="randomize();">Anong Ulam?</button>
+		<h1 id="ulam"></h1>
+
+
+		<script>
+			var mga_ulam = [
+				"Kaldereta",
+				"Tinola",
+				"Adobo",
+				"Sisig",
+				"Burger Steak",
+				"Fried Chicken",
+				"Roasted Chicken",
+				"Pares",
+				"Picadillo",
+				"Adobong Puti",
+				"Bistek",
+				"Munggo",
+				"Pork Binagoongan",
+				"Ginataang Gulay",
+				"Chopsuey",
+				"Afritada",
+				"Pork Chop",
+				"Sinigang",
+				"Pinikpikan",
+				"Bulalo",
+				"Bicol Express",
+				"Inasal",
+				"Shawarma",
+				"Kebab",
+				"Chicken Curry",
+				"Chicken Sopas",
+				"Chicken Ala King",
+				"Lechon Paksiw",
+				"Buttered Shrimp",
+				"Bangus",
+				"Meatballs",
+				"Pork Ribs",	
+			];
+			function randomize() {
+				ang_ulam = mga_ulam[Math.floor(Math.random()*mga_ulam.length)];
+				document.querySelectorAll('#ulam')[0].innerHTML = '<a href="https://google.com/search?q=' + ang_ulam + '">' + ang_ulam + '</a>';
+			}
+		</script>
+
+	</body>
+	</html>
